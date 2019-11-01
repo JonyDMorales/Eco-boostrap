@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+body{
+  padding-top: 71px;
+}
+
+/*   COLORES    */
+$colorTextoVerde: #00CC5E;
+$colorTextoGris: #808080;
+$colorBotonVerde: #00CC00;
+$colorFondoVerde: #00CC5E;
+$colorFondoObscuro: #1E1E1E;
+$colorFondoNegro: #000000;
+$colorFondoProyect: #F7F7F7;
+$colorTextoMeta: #4D4D4D;
+$colorFondoGris: #F2F2F2;
+
+$tamañoTitulosGrandes: 40px;
+$tamañoTitulosMedianos: 30px;
+$tamañoTitulosPequeños: 19px;
+$tamañoTexto: 15px;
+$tamañoPequeño: 10px ;
+
+/*   FUENTES    */
+@font-face {
+  font-family: "Glober-Black";
+  src: url("/assets/font/GLOBERBLACK.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Bold";
+  src: url("/assets/font/GLOBERBOLD.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Bold";
+  src: url("/assets/font/GLOBERBOLD.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Book";
+  src: url("/assets/font/GLOBERBOOK.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Heavy";
+  src: url("/assets/font/GLOBERHEAVY.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Light";
+  src: url("/assets/font/GLOBERLIGHT.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Regular";
+  src: url("/assets/font/GLOBERREGULAR.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Semibold";
+  src: url("/assets/font/GLOBERSEMIBOLD.OTF");
+}
+
+@font-face {
+  font-family: "Glober-Thin";
+  src: url("/assets/font/GLOBERTHIN.OTF");
+}

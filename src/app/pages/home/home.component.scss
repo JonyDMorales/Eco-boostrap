@@ -1,0 +1,14 @@
+@import "../../../styles";
+
+.eco-img{
+  //background: url("/assets/img/Imagen-Header.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.titulo{
+  padding: 20px;
+  font-size: $tamañoTitulosMedianos;
+  font-family: "Glober-Bold";
+}
