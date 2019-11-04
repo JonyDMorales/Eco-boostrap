@@ -1,0 +1,23 @@
+<section class="login">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 my-4">
+      <div class="card" >
+        <div class="card-body">
+          <h2 class="card-title text-center">Iniciar sesión</h2>
+          <div class="card-text">
+            <form class="d-flex flex-column justify-content-center align-items-center">
+              <input type="email" placeholder="email">
+              <input type="password" placeholder="contraseña">
+              <button> Iniciar </button>
+              <a [routerLink]="['/new-user']"> O registrarte </a>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-4"></div>
+  </div>
+  <app-footer-transparent></app-footer-transparent>
+</section>

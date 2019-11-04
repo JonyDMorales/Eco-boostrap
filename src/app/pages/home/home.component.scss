@@ -1,10 +1,35 @@
 @import "../../../styles";
 
 .eco-img{
-  //background: url("/assets/img/Imagen-Header.png");
+  background: url("https://ecofin-assets.s3.amazonaws.com/Imagen-Header.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  min-height: 500px;
+  max-height: 500px;
+  color: white;
+
+  .head{
+    margin-right: 50px;
+  }
+
+  h2{
+    font-family: "Glober-Heavy";
+    font-size: $tamañoTitulosGrandes;
+  }
+
+
+
+  h4{
+    font-family: "Glober-Bold";
+    font-size: $tamañoTitulosMedianos;
+  }
+
+}
+
+h3{
+  font-family: "Glober-Heavy";
+  font-size: $tamañoTitulosGrandes;
 }
 
 .titulo{
@@ -12,3 +37,55 @@
   font-size: $tamañoTitulosMedianos;
   font-family: "Glober-Bold";
 }
+
+h4{
+  font-family: "Glober-Bold";
+  font-size: $tamañoTitulosMedianos;
+}
+
+p{
+  font-family: "Glober-Regular";
+  font-size: $tamañoTexto;
+}
+
+.impacto{
+  background: $colorFondoVerde;
+  color: white;
+  font-family: "Glober-Bold";
+
+  h5{
+    font-family: "Glober-Bold";
+    font-size: $tamañoTitulosMedianos;
+  }
+  p{
+    font-family: "Glober-Semibold";
+    font-size: $tamañoTexto;
+  }
+}
+.texto-fondo{
+  background: url("https://ecofin-assets.s3.amazonaws.com/ganaderia.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .acerca {
+    padding: 0 50px 0 50px;
+  }
+}
+
+.colaboradores{
+  background: $colorFondoGris;
+  h3{
+    padding: 30px;
+  }
+
+  .colaboradores-eco{
+    background: url("https://ecofin-assets.s3.amazonaws.com/companies.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 200px;
+    max-height: 200px;
+
+  }
+}
+

@@ -1,0 +1,50 @@
+@import "../../../styles";
+
+.footer{
+  background: $colorFondoObscuro;
+  color: white;
+  padding: 20px 0 20px 0;
+  font-family: "Glober-Bold";
+  font-size: $tamañoTexto;
+
+  .FAQ{
+    color: white;
+    cursor: pointer;
+  }
+  .Contacto{
+    color: white;
+    cursor: pointer;
+  }
+  .Privacidad{
+    color: white;
+    cursor: pointer;
+  }
+  .twitter{
+    color: white;
+  }
+  .facebook{
+    color: white;
+  }
+  .instagram{
+    color: white;
+  }
+  .facebook:hover {
+    color: #3b5998;
+  }
+
+  .twitter:hover {
+    color: #55acee;
+  }
+  .instagram:hover {
+    color: #3f729b;
+  }
+}
+
+.copyright{
+  color: white;
+  font-family: "Glober-Bold";
+  font-size: $tamañoPequeño;
+  background: $colorFondoNegro;
+  text-align: center;
+  padding: 10px 0 10px 0;
+}

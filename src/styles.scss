@@ -3,10 +3,6 @@
   box-sizing: border-box;
 }
 
-body{
-  padding-top: 71px;
-}
-
 /*   COLORES    */
 $colorTextoVerde: #00CC5E;
 $colorTextoGris: #808080;
@@ -68,4 +64,19 @@ $tamañoPequeño: 10px ;
 @font-face {
   font-family: "Glober-Thin";
   src: url("/assets/font/GLOBERTHIN.OTF");
+}
+
+button {
+  padding: 15px 50px;
+  border-radius: 40px;
+  background: $colorBotonVerde;
+  font-family: "Glober-Black";
+  font-size: 16px;
+  border: none;
+  color: white;
+  box-shadow: 9px 9px 18px 0px rgba(0,0,0,0.35);
+}
+
+button:hover {
+  background: rgba($colorBotonVerde, 0.8);
 }

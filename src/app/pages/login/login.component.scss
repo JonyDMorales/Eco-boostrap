@@ -1,0 +1,42 @@
+@import "../../../styles";
+
+body{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.login{
+  background: url("https://ecofin-assets.s3.amazonaws.com/login-back.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 30px;
+
+  a {
+    padding-top: 20px;
+    text-decoration: none;
+    color: $colorTextoVerde;
+    font-family: "Glober-Regular";
+    font-size: $tamañoTexto;
+  }
+
+}
+
+h2{
+  font-family: "Glober-Heavy";
+  font-size: $tamañoTitulosGrandes;
+  margin-bottom: 30px;
+}
+
+input{
+  padding: 20px 40px;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  border: 0.6px solid $colorTextoGris;
+  font-family: "Glober-Book";
+  font-size: $tamañoTitulosPequeños;
+}
