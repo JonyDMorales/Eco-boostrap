@@ -13,6 +13,7 @@ body{
 }
 
 .card {
+  margin: 0 15px 0 15px;
   padding: 10px;
   border-radius: 30px;
 
@@ -39,4 +40,8 @@ input{
   border: 0.6px solid $colorTextoGris;
   font-family: "Glober-Book";
   font-size: $tamañoTitulosPequeños;
+}
+
+input:focus{
+  border: 0.6px solid $colorTextoVerde;
 }

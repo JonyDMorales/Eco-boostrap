@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+
+
+<section class="row proyect">
+  <div class="col-2 d-none d-lg-block"></div>
+  <div class="col-12 col-lg-8 my-4 " >
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title text-center">Nuevo proyecto</h2>
+        <div class="card-text">
+          <form>
+            <div class="row">
+              <div class="form-group col-12">
+                <input type="text" class="form-control foto-proyecto"  placeholder="Foto del proyecto" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-12 col-md-6">
+                <input type="text" class="form-control"  placeholder="nombre del proyecto" required>
+              </div>
+              <div class="form-group col-12 col-md-6 py-0">
+                <select  id="categori" name="categoria" class="custom-select" required>
+                  <option selected value=""> Categoría </option>
+                  <option value="agricola"> Agricola </option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-12">
+                <input type="text" class="form-control description"  placeholder="descripción" required>
+              </div>
+            </div>
+            <div class="row justify-content-between align-items-start">
+              <div class="form-group col-12 col-md-6">
+                <input type="number" class="form-control"  placeholder="valor estimado" required>
+              </div>
+              <div class="form-group col-12 col-md-6 py-0">
+                <select  id="pais" name="pais" class="custom-select" required>
+                  <option selected value=""> País </option>
+                  <option value="mexico"> México </option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-12 col-md-6">
+                <input  type="text" class="form-control"  placeholder="fecha de inicio" id="fechaInicio" name="fechaInicio" onfocus="(this.type='date')"  onfocusout="(this.type='text')" required>
+              </div>
+              <div class="form-group col-12 col-md-6">
+                <input  type="text" class="form-control"  placeholder="fecha de término" id="fechaTermino" name="fechaTermino" onfocus="(this.type='date')"  onfocusout="(this.type='text')" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4 d-none d-md-block"></div>
+              <div class="form-group col-12 col-md-4 text-center">
+                <button> Crear </button>
+              </div>
+              <div class="col-4 d-none d-md-block"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-2 d-none d-lg-block"></div>
+</section>
+
+
+
+
+<app-footer></app-footer>

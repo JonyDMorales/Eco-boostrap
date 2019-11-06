@@ -1,25 +1,76 @@
 <app-navbar></app-navbar>
 
 <section class="row new-user">
-  <div class="col-4"></div>
+  <div class="col-2 d-none d-lg-block"></div>
+  <div class="col-12 col-lg-8 my-4 " >
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title text-center">Registrate</h2>
+        <div class="card-text">
+          <form>
+            <div class="row">
+              <div class="form-group col-12 col-md-6">
+                <input type="text" class="form-control"  placeholder="nombre" required>
+              </div>
+              <div class="form-group d-flex justify-content-around align-items-start col-12 col-md-6">
+                <label class="form-check-label" >
+                  Sexo:
+                </label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="hombre" checked>
+                  <label class="form-check-label" >
+                    H
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="mujer">
+                  <label class="form-check-label">
+                    M
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-12 col-md-6">
+                <input type="email" class="form-control"  placeholder="email" required>
+              </div>
+            </div>
+            <div class="row justify-content-between align-items-start">
+              <div class="form-group col-12 col-md-6">
+                <input  type="text" class="form-control"  placeholder="fecha de nacimiento" id="fechaNacimiento" name="fechaNacimiento" onfocus="(this.type='date')"  onfocusout="(this.type='text')" required>
+              </div>
+              <div class="form-group col-12 col-md-6 py-0">
+                <select  id="pais" name="pais" class="custom-select" required>
+                  <option selected value=""> País </option>
+                  <option value="mexico"> México </option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-12 col-md-6">
+                <input type="text" class="form-control"  placeholder="profesión" required>
+              </div>
+            </div>
 
-  <div class="col-4 card" >
-    <div class="card-body">
-      <h2 class="card-title text-center">Iniciar sesión</h2>
-      <div class="card-text">
-        <form class="row">
-          <div class="form-group col">
-            <input type="email" class="form-control" id="" placeholder="Nombre del proyecto">
-          </div>
-          <div class="form-group col">
-            <input type="email" class="form-control" id="" placeholder="Nombre del proyecto">
-          </div>
-        </form>
+            <div class="row">
+              <div class="form-group col-12 col-md-6">
+                <input type="text" class="form-control"  placeholder="dirección" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4 d-none d-md-block"></div>
+              <div class="form-group col-12 col-md-4 text-center">
+                <button> Listo </button>
+              </div>
+              <div class="col-4 d-none d-md-block"></div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="col-4"></div>
+  <div class="col-2 d-none d-lg-block"></div>
 
 </section>
 
