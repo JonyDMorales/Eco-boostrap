@@ -4,6 +4,7 @@ import {HomeComponent} from './pages/home/home.component';
 import {LoginComponent} from './pages/login/login.component';
 import {NewUserComponent} from './pages/new-user/new-user.component';
 import {NewProyectComponent} from './pages/new-proyect/new-proyect.component';
+import {ProyectsComponent} from './pages/proyects/proyects.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'new-user', component: NewUserComponent },
   { path: 'proyect', component: NewProyectComponent },
+  { path: 'all/proyects', component: ProyectsComponent },
   { path: '**' , pathMatch: 'full' , redirectTo: 'home'}
 ];
 

@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { FooterTransparentComponent } from './components/footer-transparent/footer-transparent.component';
 import { NewUserComponent } from './pages/new-user/new-user.component';
 import { NewProyectComponent } from './pages/new-proyect/new-proyect.component';
+import { ProyectsComponent } from './pages/proyects/proyects.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NewProyectComponent } from './pages/new-proyect/new-proyect.component';
     LoginComponent,
     FooterTransparentComponent,
     NewUserComponent,
-    NewProyectComponent
+    NewProyectComponent,
+    ProyectsComponent
   ],
   imports: [
     BrowserModule,
