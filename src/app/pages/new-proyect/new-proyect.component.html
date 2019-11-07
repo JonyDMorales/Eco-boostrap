@@ -8,18 +8,18 @@
       <div class="card-body">
         <h2 class="card-title text-center">Nuevo proyecto</h2>
         <div class="card-text">
-          <form>
+          <form  (ngSubmit)="onSubmit(formProyect)"  #formProyect="ngForm">
             <div class="row">
-              <div class="form-group col-12">
-                <input type="text" class="form-control foto-proyecto"  placeholder="Foto del proyecto" required>
+              <div class="form-group col-12" appDropFile [proyect]="proyecto" (mouseSobre)="archivoSobreDrop = $event"  [ngClass]="{'file-over': archivoSobreDrop}">
+                <input  type="text" class="form-control foto-proyecto"  placeholder="Foto del proyecto" required>
               </div>
             </div>
             <div class="row">
               <div class="form-group col-12 col-md-6">
-                <input type="text" class="form-control"  placeholder="nombre del proyecto" required>
+                <input type="text" class="form-control"  placeholder="nombre del proyecto" [(ngModel)]="proyecto.nombre" id="nombre" name="nombre" required>
               </div>
               <div class="form-group col-12 col-md-6 py-0">
-                <select  id="categori" name="categoria" class="custom-select" required>
+                <select class="custom-select" [(ngModel)]="proyecto.categoria" id="categoria" name="categoria" required>
                   <option selected value=""> Categoría </option>
                   <option value="agricola"> Agricola </option>
                 </select>
@@ -27,15 +27,15 @@
             </div>
             <div class="row">
               <div class="form-group col-12">
-                <input type="text" class="form-control description"  placeholder="descripción" required>
+                <input type="text" class="form-control description"  placeholder="descripción" [(ngModel)]="proyecto.descripcion" id="descripcion" name="descripcion" required>
               </div>
             </div>
             <div class="row justify-content-between align-items-start">
               <div class="form-group col-12 col-md-6">
-                <input type="number" class="form-control"  placeholder="valor estimado" required>
+                <input type="number" class="form-control"  placeholder="valor estimado" [(ngModel)]="proyecto.valorProyecto" id="valorProyecto" name="valorProyecto" required>
               </div>
               <div class="form-group col-12 col-md-6 py-0">
-                <select  id="pais" name="pais" class="custom-select" required>
+                <select class="custom-select" [(ngModel)]="proyecto.pais" id="pais" name="pais" required>
                   <option selected value=""> País </option>
                   <option value="mexico"> México </option>
                 </select>
@@ -43,10 +43,10 @@
             </div>
             <div class="row">
               <div class="form-group col-12 col-md-6">
-                <input  type="text" class="form-control"  placeholder="fecha de inicio" id="fechaInicio" name="fechaInicio" onfocus="(this.type='date')"  onfocusout="(this.type='text')" required>
+                <input type="text" class="form-control"  placeholder="fecha de inicio" onfocus="(this.type='date')"  onfocusout="(this.type='text')" [(ngModel)]="proyecto.startDate" id="startDate" name="startDate" required>
               </div>
               <div class="form-group col-12 col-md-6">
-                <input  type="text" class="form-control"  placeholder="fecha de término" id="fechaTermino" name="fechaTermino" onfocus="(this.type='date')"  onfocusout="(this.type='text')" required>
+                <input type="text" class="form-control"  placeholder="fecha de término" onfocus="(this.type='date')"  onfocusout="(this.type='text')" [(ngModel)]="proyecto.finishDate" id="finishDate" name="finishDate" required>
               </div>
             </div>
             <div class="row">

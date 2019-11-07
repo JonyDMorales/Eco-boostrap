@@ -8,9 +8,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-width: 700px;
-    max-width: 700px;
-    padding: 150px 20px 20px 0;
+    min-width: 650px;
+    max-width: 650px;
+    padding: 100px 10px 10px 0;
     border-radius: 30px;
   }
 
@@ -24,3 +24,57 @@
   background: $colorBotonVerde;
 }
 
+h3{
+  font-family: "Glober-Heavy";
+  font-size: $tamañoTitulosMedianos;
+}
+
+h6{
+  font-family: "Glober-Semibold";
+  font-size: $tamañoTexto;
+  color: #333333;
+}
+
+.porcentaje{
+  font-family: "Glober-Bold";
+  color: #B3B3B3;
+  font-size: $tamañoTitulosPequeños;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.valor-conseguido{
+  font-family: "Glober-Bold";
+  font-size: $tamañoTitulosPequeños;
+}
+
+.texto-conseguido{
+  font-family: "Glober-Bold";
+  font-size: $tamañoTexto;
+}
+
+.valor-meta{
+  font-family: "Glober-Bold";
+  font-size: $tamañoTitulosPequeños;
+  color: #4D4D4D;
+}
+
+.texto-meta{
+  font-family: "Glober-Bold";
+  font-size: $tamañoTexto;
+  color: #4D4D4D;
+}
+
+.menu{
+  background: $colorFondoProyect;
+}
+
+.nav-link{
+  color: #333333;
+  font-family: "Glober-Semibold";
+  font-size: $tamañoTitulosPequeños;
+}
+
+.active{
+  color: $colorBotonVerde;
+}

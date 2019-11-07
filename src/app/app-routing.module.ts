@@ -14,8 +14,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'new-user', component: NewUserComponent },
   { path: 'proyect',
-    component: NewProyectComponent,
-    canActivate: [ AuthGuard ]
+    component: NewProyectComponent
+    //canActivate: [ AuthGuard ]
   },
   { path: 'proyect-details',
     component: ProyectComponent

@@ -8,6 +8,10 @@
 .card{
   cursor: pointer;
   border-radius: 30px;
+  min-width: 300px;
+  max-width: 300px;
+  mim-height: 365px;
+  max-height: 365px;
   box-shadow: 10px 10px 25px -4px rgba(0,0,0,0.36);
 }
 
@@ -23,6 +27,7 @@
 }
 
 .card-text{
+
   p{
     font-family: "Glober-Bold";
     font-size: $tamañoTexto;
@@ -32,6 +37,9 @@
   .porcentaje{
     font-family: "Glober-Bold";
     color: #B3B3B3;
+    font-size: $tamañoTitulosPequeños;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .valor-conseguido{
