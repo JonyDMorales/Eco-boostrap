@@ -6,6 +6,7 @@ import {NewUserComponent} from './pages/new-user/new-user.component';
 import {NewProyectComponent} from './pages/new-proyect/new-proyect.component';
 import {ProyectsComponent} from './pages/proyects/proyects.component';
 import {AuthGuard} from './services/auth.guard';
+import {ProyectComponent} from './pages/proyect/proyect.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,9 @@ const routes: Routes = [
   { path: 'proyect',
     component: NewProyectComponent,
     canActivate: [ AuthGuard ]
+  },
+  { path: 'proyect-details',
+    component: ProyectComponent
   },
   { path: 'all/proyects', component: ProyectsComponent },
   { path: '**' , pathMatch: 'full' , redirectTo: 'home'}

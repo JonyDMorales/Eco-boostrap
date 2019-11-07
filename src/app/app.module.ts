@@ -11,6 +11,7 @@ import { FooterTransparentComponent } from './components/footer-transparent/foot
 import { NewUserComponent } from './pages/new-user/new-user.component';
 import { NewProyectComponent } from './pages/new-proyect/new-proyect.component';
 import { ProyectsComponent } from './pages/proyects/proyects.component';
+import { ProyectComponent } from './pages/proyect/proyect.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProyectsComponent } from './pages/proyects/proyects.component';
     FooterTransparentComponent,
     NewUserComponent,
     NewProyectComponent,
-    ProyectsComponent
+    ProyectsComponent,
+    ProyectComponent
   ],
   imports: [
     BrowserModule,

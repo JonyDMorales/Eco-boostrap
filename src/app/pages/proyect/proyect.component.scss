@@ -1,0 +1,26 @@
+@import "../../../styles";
+
+.proyect {
+  margin-top: 75px;
+
+  .boton-img {
+    background: url("https://ecofin-assets.s3.amazonaws.com/login.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 700px;
+    max-width: 700px;
+    padding: 150px 20px 20px 0;
+    border-radius: 30px;
+  }
+
+  .div-progress{
+    max-width: 90%;
+    margin-bottom: 10px;
+  }
+}
+
+.progress-bar{
+  background: $colorBotonVerde;
+}
+
