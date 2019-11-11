@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UserModel} from '../../models/user.model';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  user: UserModel;
+  bandera = false;
+
+  constructor() {
+    this.user = new UserModel();
+  }
 
   ngOnInit() {
+    this.user.nombre = localStorage.getItem('NOMBRE');
+    this.user.email = localStorage.getItem('EMAIL');
+    this.bandera = false;
+    if (this.user.nombre != null) {
+      this.bandera = true;
+    }
   }
 
 }

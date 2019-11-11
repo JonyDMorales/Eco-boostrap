@@ -1,10 +1,7 @@
 @import "../../../styles";
 
-body{
-  margin-top: 75px;
-}
-
 .new-user{
+  margin-top: 75px;
   background: url("https://ecofin-assets.s3.amazonaws.com/Foto-Registro-user.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -29,9 +26,23 @@ h2{
   margin-bottom: 30px;
 }
 
-input, select{
+label{
+  font-family: "Glober-Book";
+  font-size: $tamañoTitulosPequeños;
+  color: $colorTextoGris;
+}
+
+input{
   padding: 30px 40px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  border: 0.6px solid $colorTextoGris;
+  font-family: "Glober-Book";
+  font-size: $tamañoTitulosPequeños;
+}
+
+select{
+  height: 50px;
   border-radius: 30px;
   border: 0.6px solid $colorTextoGris;
   font-family: "Glober-Book";

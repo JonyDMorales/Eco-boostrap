@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import {ProyectModel} from '../models/proyect.model';
+import Swal from "sweetalert2";
+import cifrar from 'jsrsasign';
+import {UserModel} from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +12,13 @@ import {ProyectModel} from '../models/proyect.model';
 export class BackendService {
 //private url = 'http://ec2-54-158-130-38.compute-1.amazonaws.com:8080/';
   private url = 'http://localhost:8080/';
+  private passwordKey = 'EcoPassword00000000000000000000000000000000000000000000000000000';
 
   constructor(private http: HttpClient) { }
+
+  private encrypt(password) {
+    return cifrar.jws.JWS.sign('HS256',  JSON.stringify({alg: 'HS256', typ: 'JWT'}), { password }, this.passwordKey);
+  }
 
   public login(email, password) {
     const uri = this.url + 'login';
@@ -18,13 +26,34 @@ export class BackendService {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })};
+
+    password = this.encrypt(password);
+
     return this.http.post(uri, { email, password }, httpOptions ).pipe(
       map(res => {
-        if ( res['token'] != null ) {
-          localStorage.setItem('USER_TOKEN', res['token']);
-          localStorage.setItem('NOMBRE',res['nombre'] );
-          localStorage.setItem('EMAIL',res['email'] );
-          console.log(localStorage.getItem('NOMBRE'));
+
+        if (res != null) {
+          if ( res['TOKEN'] != null ) {
+            localStorage.setItem('TOKEN', res['TOKEN']);
+            localStorage.setItem('TOKEN_ID', res['TOKEN_ID']);
+            localStorage.setItem('NOMBRE',res['NOMBRE'] );
+            localStorage.setItem('EMAIL',res['EMAIL'] );
+            console.log(localStorage.getItem('NOMBRE'));
+          } else {
+            localStorage.clear();
+            Swal.fire({
+              icon: 'error',
+              title: 'Datos incorrectos',
+              text: 'Por favor verifica los datos e intenta nuevamente.'
+            });
+          }
+        } else {
+          localStorage.clear();
+          Swal.fire({
+            icon: 'error',
+            title: 'Datos incorrectos',
+            text: 'Por favor verifica los datos e intenta nuevamente.'
+          });
         }
       }));
   }
@@ -65,6 +94,39 @@ export class BackendService {
     }, httpOptions ).pipe(
       map(res => {
         console.log(res);
+      }));
+  }
+
+  public saveUser(user: UserModel) {
+    const uri = this.url + 'save/persona';
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })};
+    user.password = this.encrypt(user.password);
+    return this.http.post(uri, {
+      nombre: user.nombre,
+      email: user.email,
+      foto: user.foto,
+      perfil: user.perfil,
+      password: user.password,
+      direccion: user.direccion,
+      profesion: user.prefesion,
+      fechaNacimiento: user.fechaNacimiento,
+      sexo: user.sexo,
+      pais: user.pais,
+      activo: user.activo
+    }, httpOptions ).pipe(
+      map(res => {
+        if ( res['id'] != null ) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Exito',
+            text: 'Ya puedes iniciar sesión.'
+          });
+          return true;
+        }
+        return false;
       }));
   }
 }

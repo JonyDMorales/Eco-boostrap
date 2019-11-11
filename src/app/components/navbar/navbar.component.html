@@ -20,8 +20,14 @@
             <a href="#" class="dropdown-item">USD</a>
           </div>
         </li>
-        <li class="nav-item">
+        <li *ngIf="!bandera" class="nav-item">
           <a [routerLink]="['/login']" class="nav-link item">Sing in</a>
+        </li>
+        <li *ngIf="bandera" class="nav-item">
+          <a href="#" class="nav-link dropdown-toggle" id="menu-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ user.nombre }} </a>
+          <div class="dropdown-menu" aria-labelledby="menu-user">
+            <a href="#" class="dropdown-item">Logout</a>
+          </div>
         </li>
       </ul>
     </div>
@@ -36,15 +42,14 @@
       <div class="col-4 my-0 py-1">
         <a href="#" class="p-0 m-0"> <img src="https://ecofin-assets.s3.amazonaws.com/icono-header.png" width="60px" alt="EcoFin-F"> </a>
       </div>
-      <div class="col-4  d-flex justify-content-around">
-        <div class="dropdown py-4">
-          <a href="#" class="dropdown-toggle" id="menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> MXN </a>
-          <div class="dropdown-menu" aria-labelledby="menu">
-            <a href="#" class="dropdown-item">MXN</a>
-            <a href="#" class="dropdown-item">USD</a>
-          </div>
+      <div class="col-4 d-flex justify-content-around align-items-center">
+       <div class="dropdown">
+         <a href="#" class="dropdown-toggle" id="menu-divisas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> MXN </a>
+       </div>
+        <a *ngIf="!bandera" [routerLink]="['/login']" class="py-3"><img src="https://ecofin-assets.s3.amazonaws.com/%C3%ADcono-Log-in.png" width="170px" alt=""></a>
+        <div *ngIf="bandera" class="dropdown">
+          <a class="nombre dropdown-toggle" id="menu-usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ user.nombre }} </a>
         </div>
-        <a [routerLink]="['/login']" class=" py-3"><img src="https://ecofin-assets.s3.amazonaws.com/%C3%ADcono-Log-in.png" width="170px" alt=""></a>
       </div>
     </div>
   </div>

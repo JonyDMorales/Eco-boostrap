@@ -6,9 +6,9 @@
         <div class="card-body">
           <h2 class="card-title text-center">Iniciar sesión</h2>
           <div class="card-text">
-            <form class="d-flex flex-column justify-content-center align-items-center">
-              <input type="email" placeholder="email" required>
-              <input type="password" placeholder="contraseña" required>
+            <form (ngSubmit)="onSubmit(formLogin)" #formLogin="ngForm" class="d-flex flex-column justify-content-center align-items-center">
+              <input type="email" placeholder="email" [(ngModel)]="user.email" id="email" name="email" required>
+              <input type="password" placeholder="contraseña" [(ngModel)]="user.password" id="password" name="password" required>
               <button> Iniciar </button>
               <a [routerLink]="['/new-user']"> O registrarte </a>
             </form>

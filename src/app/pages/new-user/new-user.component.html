@@ -7,54 +7,46 @@
       <div class="card-body">
         <h2 class="card-title text-center">Registrate</h2>
         <div class="card-text">
-          <form>
+          <form (ngSubmit)="onSubmit(formUser)" #formUser="ngForm">
             <div class="row">
               <div class="form-group col-12 col-md-6">
-                <input type="text" class="form-control"  placeholder="nombre" required>
+                <input type="text" class="form-control"  placeholder="nombre" [(ngModel)]="user.nombre" id="nombre" name="nombre" required>
               </div>
-              <div class="form-group d-flex justify-content-around align-items-start col-12 col-md-6">
-                <label class="form-check-label" >
+              <div class="form-group d-flex align-items-start col-12 col-md-6">
+                <label class="form-check-label mr-3" >
                   Sexo:
                 </label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="hombre" checked>
-                  <label class="form-check-label" >
-                    H
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="mujer">
-                  <label class="form-check-label">
-                    M
-                  </label>
-                </div>
+                <input class="ml-5 mt-1" type="radio" name="sexo"  value="hombre" [(ngModel)]="user.sexo" required> <label class="mt-0 ml-2">H</label>
+                <input class="ml-5 mt-1" type="radio" name="sexo" value="mujer" [(ngModel)]="user.sexo" required> <label class="mt-0 ml-2">M</label>
               </div>
             </div>
             <div class="row">
               <div class="form-group col-12 col-md-6">
-                <input type="email" class="form-control"  placeholder="email" required>
+                <input type="email" class="form-control"  placeholder="email" [(ngModel)]="user.email" id="email" name="email" required>
+              </div>
+              <div class="form-group col-12 col-md-6">
+                <input type="password" class="form-control"  placeholder="contraseña" minlength="8" [(ngModel)]="user.password" id="password" name="password" required>
               </div>
             </div>
             <div class="row justify-content-between align-items-start">
               <div class="form-group col-12 col-md-6">
-                <input  type="text" class="form-control"  placeholder="fecha de nacimiento" id="fechaNacimiento" name="fechaNacimiento" onfocus="(this.type='date')"  onfocusout="(this.type='text')" required>
+                <input  type="text" class="form-control"  placeholder="fecha de nacimiento" onfocus="(this.type='date')"  onfocusout="(this.type='text')" [(ngModel)]="this.user.fechaNacimiento" id="fechaNacimiento" name="fechaNacimiento" required>
               </div>
-              <div class="form-group col-12 col-md-6 py-0">
-                <select  id="pais" name="pais" class="custom-select" required>
-                  <option selected value=""> País </option>
+              <div class="form-group col-12 col-md-6 mt-2">
+                <select class="custom-select" [(ngModel)]="user.pais" id="pais" name="pais" required>
+                  <option value="" selected> País </option>
                   <option value="mexico"> México </option>
                 </select>
               </div>
             </div>
             <div class="row">
               <div class="form-group col-12 col-md-6">
-                <input type="text" class="form-control"  placeholder="profesión" required>
+                <input type="text" class="form-control"  placeholder="profesión" [(ngModel)]="user.prefesion" id="profesion" name="profesion" required>
               </div>
             </div>
-
             <div class="row">
               <div class="form-group col-12 col-md-6">
-                <input type="text" class="form-control"  placeholder="dirección" required>
+                <input type="text" class="form-control"  placeholder="dirección" [(ngModel)]="user.direccion" id="direccion" name="direccion" required>
               </div>
             </div>
             <div class="row">

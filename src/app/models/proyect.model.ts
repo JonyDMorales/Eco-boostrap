@@ -14,5 +14,5 @@ export class ProyectModel {
   diasFaltantes: number;
   pais: string;
   visitas: number;
-  activo:number;
+  activo: 0;
 }

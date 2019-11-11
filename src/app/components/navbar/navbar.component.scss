@@ -19,12 +19,14 @@ header{
 
 .menu{
   text-align: center;
-  //padding: 20px 0 20px 0;
   border-bottom: .5px solid $colorTextoGris;
   background: white;
   a{
     color: $colorTextoGris;
     border-bottom: 2px solid transparent;
   }
+}
 
+.nombre{
+  color: $colorBotonVerde !important;
 }
