@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import {ProyectModel} from '../models/proyect.model';
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2';
 import cifrar from 'jsrsasign';
 import {UserModel} from '../models/user.model';
 

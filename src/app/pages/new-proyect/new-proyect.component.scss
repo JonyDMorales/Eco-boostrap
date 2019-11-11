@@ -30,7 +30,7 @@ input, select{
   padding: 30px 40px;
   margin-bottom: 30px;
   border-radius: 30px;
-  border: 0.6px solid $colorTextoGris;
+  border: 0.7px solid $colorTextoGris;
   font-family: "Glober-Book";
   font-size: $tamañoTitulosPequeños;
 }
@@ -39,7 +39,7 @@ input, select{
   padding: 50px 70px;
   text-align: center;
   background: $colorFondoProyect;;
-  border: 0.6px solid $colorFondoProyect;;
+  border: 0.7px solid $colorFondoProyect;;
   border-radius: 30px 30px 0 0;
 }
 
@@ -58,5 +58,6 @@ input[type="radio"]{
 }
 
 input:focus{
-  border: 0.6px solid $colorTextoVerde;
+  border: 0.7px solid $colorTextoVerde;
+  outline: 0;
 }
