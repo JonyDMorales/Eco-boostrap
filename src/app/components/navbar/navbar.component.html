@@ -11,7 +11,8 @@
           <a [routerLink]="['/all/proyects']" class="nav-link">Proyectos</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Nosotros</a>
+          <a *ngIf="!bandera" href="#" class="nav-link">Nosotros</a>
+          <a *ngIf="bandera" [routerLink]="['/proyect']" class="nav-link"> Nuevo Proyecto </a>
         </li>
         <li class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" id="menu-categorias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> MXN </a>
@@ -36,8 +37,9 @@
   <div class="menu d-none d-md-block fixed-top">
     <div class="row">
       <div class="col-4 py-4 d-flex justify-content-around">
-        <a [routerLink]="['/all/proyects']">Proyectos</a>
-        <a href="#"> Nosotros </a>
+        <a  [routerLink]="['/all/proyects']">Proyectos</a>
+        <a *ngIf="bandera" [routerLink]="['/proyect']" class="nuevo-proyecto"> Nuevo Proyecto </a>
+        <a *ngIf="!bandera" href="#"> Nosotros </a>
       </div>
       <div class="col-4 my-0 py-1">
         <a href="#" class="p-0 m-0"> <img src="https://ecofin-assets.s3.amazonaws.com/icono-header.png" width="60px" alt="EcoFin-F"> </a>

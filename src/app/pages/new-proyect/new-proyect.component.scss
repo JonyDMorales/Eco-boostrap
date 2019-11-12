@@ -26,11 +26,23 @@ h2{
   margin-bottom: 30px;
 }
 
-input, select{
+input, textarea{
   padding: 30px 40px;
   margin-bottom: 30px;
   border-radius: 30px;
   border: 0.7px solid $colorTextoGris;
+  font-family: "Glober-Book";
+  font-size: $tamañoTitulosPequeños;
+}
+
+textarea{
+  resize: none;
+}
+
+select{
+  height: 50px;
+  border-radius: 30px;
+  border: 0.6px solid $colorTextoGris;
   font-family: "Glober-Book";
   font-size: $tamañoTitulosPequeños;
 }
@@ -57,7 +69,7 @@ input[type="radio"]{
   font-size: $tamañoTitulosPequeños;
 }
 
-input:focus{
+input:focus, textarea:focus{
   border: 0.7px solid $colorTextoVerde;
   outline: 0;
 }

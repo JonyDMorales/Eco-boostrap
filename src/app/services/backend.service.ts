@@ -79,21 +79,32 @@ export class BackendService {
     const uri = this.url + 'save/proyecto';
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('TOKEN')
       })};
-    console.log(proyect);
     return this.http.post(uri, {
-      propietario: { nombre: localStorage.getItem('NOMBRE'), id: localStorage.getItem('USER_TOKEN') },
+      propietario: { nombre: localStorage.getItem('NOMBRE'), id: localStorage.getItem('TOKEN_ID') },
       nombre: proyect.nombre,
+      foto: 'https://ecofin-assets.s3.amazonaws.com/login.jpg',
       descripcion: proyect.descripcion,
       categoria: proyect.categoria,
       valorProyecto: proyect.valorProyecto,
+      montoAcumulado: 0,
+      porcentaje: 0,
+      diasFaltantes: 0,
       startDate: proyect.startDate,
       finishDate: proyect.finishDate,
-      pais: proyect.pais
+      pais: proyect.pais,
+      visitas: 0,
+      prioridad: 0,
+      activo: 0
     }, httpOptions ).pipe(
       map(res => {
         console.log(res);
+        if ( res['id'] ) {
+          return true;
+        }
+        return false;
       }));
   }
 

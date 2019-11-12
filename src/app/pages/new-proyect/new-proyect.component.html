@@ -20,14 +20,14 @@
               </div>
               <div class="form-group col-12 col-md-6 py-0">
                 <select class="custom-select" [(ngModel)]="proyecto.categoria" id="categoria" name="categoria" required>
-                  <option selected value=""> Categoría </option>
+                  <option value="" selected> Categoría </option>
                   <option value="agricola"> Agricola </option>
                 </select>
               </div>
             </div>
             <div class="row">
               <div class="form-group col-12">
-                <input type="text" class="form-control description"  placeholder="descripción" [(ngModel)]="proyecto.descripcion" id="descripcion" name="descripcion" required>
+                <textarea rows="3" class="w-100" placeholder="Descripción" [(ngModel)]="proyecto.descripcion" id="descripcion" name="descripcion" required></textarea>
               </div>
             </div>
             <div class="row justify-content-between align-items-start">

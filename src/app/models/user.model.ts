@@ -3,7 +3,7 @@ export class UserModel {
   foto:string;
   email: string;
   pais: string;
-  perfil: ['ROLE_INVERSOR','ROLE_USER'];
+  perfil: ['ROLE_INVERSOR', 'ROLE_USER'];
   password: string;
   direccion: string;
   prefesion: string;
