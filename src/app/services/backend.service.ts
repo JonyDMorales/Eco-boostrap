@@ -75,6 +75,20 @@ export class BackendService {
       }));
   }
 
+  public getAllProyectos() {
+    const uri = this.url + 'get/all/proyectos';
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })};
+    return this.http.post(uri, {  }, httpOptions ).pipe(
+      map((res: Array<ProyectModel>) => {
+          if ( res ) {
+            return res;
+          }
+      }));
+  }
+
   public saveProyect(proyect: ProyectModel) {
     const uri = this.url + 'save/proyecto';
     const httpOptions = {
