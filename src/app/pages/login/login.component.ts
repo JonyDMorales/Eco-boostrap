@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
       this.consultasService.login(this.user.email, this.user.password).subscribe(
         (res) =>  {
           if (localStorage.getItem('TOKEN') != null) {
-            this.router.navigate(['/user']);
+            this.router.navigate(['/home-user']);
           } },
       (error) =>  {}
         );

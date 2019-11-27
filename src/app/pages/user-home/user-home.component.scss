@@ -1,0 +1,100 @@
+@import "../../../styles";
+
+.home-user{
+  margin-top: 30px;
+  background: url("https://ecofin-assets.s3.amazonaws.com/login-back.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 60px 10px;
+
+  h2{
+    font-family: "Glober-Heavy";
+    font-size: $tamañoTitulosGrandes;
+    color: white;
+  }
+
+  .montos{
+    color: $colorTextoVerde;
+    font-family: "Glober-Regular";
+    font-size: $tamañoTexto;
+    border-radius: 70px;
+    background: white;
+    border: 0.5px solid white;
+  }
+
+  .ganancia{
+    color: $colorTextoMeta;
+    font-family: "Glober-Regular";
+    font-size: $tamañoTexto;
+    padding: 50px 10px;
+    border-radius: 70px;
+    background: white;
+    border: 1px solid white;
+    box-shadow: 10px 10px 25px -4px rgba(0,0,0,0.36);
+  }
+}
+
+.card{
+  cursor: pointer;
+  border-radius: 30px;
+  min-width: 300px;
+  max-width: 300px;
+  mim-height: 365px;
+  max-height: 365px;
+  box-shadow: 10px 10px 25px -4px rgba(0,0,0,0.36);
+}
+
+.card-img-top{
+  border-radius: 30px 30px 0 0;
+  min-height: 90px;
+  max-height: 90px;
+}
+
+.card-title{
+  font-family: "Glober-Heavy";
+  font-size: $tamañoTitulosPequeños;
+}
+
+.card-text{
+
+  p{
+    font-family: "Glober-Bold";
+    font-size: $tamañoTexto;
+    color: #333333;
+  }
+
+  .porcentaje{
+    font-family: "Glober-Bold";
+    color: #B3B3B3;
+    font-size: $tamañoTitulosPequeños;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .valor-conseguido{
+    font-family: "Glober-Bold";
+    font-size: $tamañoTitulosPequeños;
+  }
+
+  .texto-conseguido{
+    font-family: "Glober-Bold";
+    font-size: $tamañoTexto;
+  }
+
+  .valor-meta{
+    font-family: "Glober-Bold";
+    font-size: $tamañoTitulosPequeños;
+    color: #4D4D4D;
+  }
+
+  .texto-meta{
+    font-family: "Glober-Bold";
+    font-size: $tamañoTexto;
+    color: #4D4D4D;
+  }
+
+  .progress-bar{
+    background: $colorBotonVerde;
+  }
+}

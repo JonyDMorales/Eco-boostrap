@@ -27,7 +27,7 @@
         <li *ngIf="bandera" class="nav-item">
           <a href="#" class="nav-link dropdown-toggle" id="menu-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ user.nombre }} </a>
           <div class="dropdown-menu" aria-labelledby="menu-user">
-            <a href="#" class="dropdown-item">Logout</a>
+            <a (click)="logout()" class="dropdown-item">Logout</a>
           </div>
         </li>
       </ul>
@@ -47,10 +47,17 @@
       <div class="col-4 d-flex justify-content-around align-items-center">
        <div class="dropdown">
          <a href="#" class="dropdown-toggle" id="menu-divisas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> MXN </a>
+         <div class="dropdown-menu" aria-labelledby="menu-divisas">
+           <a href="#" class="dropdown-item">MXN</a>
+           <a href="#" class="dropdown-item">USD</a>
+         </div>
        </div>
         <a *ngIf="!bandera" [routerLink]="['/login']" class="py-3"><img src="https://ecofin-assets.s3.amazonaws.com/%C3%ADcono-Log-in.png" width="170px" alt=""></a>
         <div *ngIf="bandera" class="dropdown">
           <a class="nombre dropdown-toggle" id="menu-usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ user.nombre }} </a>
+          <div class="dropdown-menu" aria-labelledby="menu-usuario">
+            <a (click)="logout()" class="dropdown-item">Logout</a>
+          </div>
         </div>
       </div>
     </div>

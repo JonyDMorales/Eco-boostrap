@@ -10,7 +10,7 @@ import {UserModel} from '../models/user.model';
   providedIn: 'root'
 })
 export class BackendService {
-//private url = 'http://ec2-54-158-130-38.compute-1.amazonaws.com:8080/';
+  //private url = 'http://ec2-3-90-151-68.compute-1.amazonaws.com:8080/';
   private url = 'http://localhost:8080/';
   private passwordKey = 'EcoPassword00000000000000000000000000000000000000000000000000000';
 
@@ -66,10 +66,11 @@ export class BackendService {
     const uri = this.url + 'get/proyectos';
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('TOKEN')
       })};
     return this.http.post(uri, { id }, httpOptions ).pipe(
-      map(res => {
+      map((res: Array<ProyectModel>) => {
         console.log(res);
         return res;
       }));
@@ -152,6 +153,20 @@ export class BackendService {
           return true;
         }
         return false;
+      }));
+  }
+
+  public getProyect(id) {
+    const uri = this.url + 'get/proyecto';
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })};
+    return this.http.post(uri, { id }, httpOptions ).pipe(
+      map((res: ProyectModel) => {
+        if ( res ) {
+          return res;
+        }
       }));
   }
 }

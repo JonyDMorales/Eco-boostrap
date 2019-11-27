@@ -7,12 +7,14 @@ import {NewProyectComponent} from './pages/new-proyect/new-proyect.component';
 import {ProyectsComponent} from './pages/proyects/proyects.component';
 import {AuthGuard} from './services/auth.guard';
 import {ProyectComponent} from './pages/proyect/proyect.component';
+import {UserHomeComponent} from './pages/user-home/user-home.component';
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'new-user', component: NewUserComponent },
+  { path: 'home-user', component: UserHomeComponent },
   { path: 'proyect',
     component: NewProyectComponent
     //canActivate: [ AuthGuard ]

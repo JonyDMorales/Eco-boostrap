@@ -25,8 +25,13 @@ header{
     color: $colorTextoGris;
     border-bottom: 2px solid transparent;
   }
+
+  .dropdown-menu{
+   min-width: auto;
+  }
 }
 
 .nombre{
   color: $colorBotonVerde !important;
 }
+

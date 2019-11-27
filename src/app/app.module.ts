@@ -16,6 +16,7 @@ import { NewProyectComponent } from './pages/new-proyect/new-proyect.component';
 import { ProyectsComponent } from './pages/proyects/proyects.component';
 import { ProyectComponent } from './pages/proyect/proyect.component';
 import { DropFileDirective } from './directives/drop-file.directive';
+import { UserHomeComponent } from './pages/user-home/user-home.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DropFileDirective } from './directives/drop-file.directive';
     NewProyectComponent,
     ProyectsComponent,
     ProyectComponent,
-    DropFileDirective
+    DropFileDirective,
+    UserHomeComponent
   ],
   imports: [
     BrowserModule,
