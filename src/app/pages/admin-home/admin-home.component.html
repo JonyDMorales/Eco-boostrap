@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+
+<div class="container my-5 tabla-proyect">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="mb-5"> Proyectos pendientes de aprobación</h2>
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Propietario</th>
+          <th scope="col">Monto</th>
+          <th scope="col">Fecha comienzo</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let proyect of proyects">
+          <th scope="row">{{ proyect.nombre }}</th>
+          <td>{{proyect.propietario.nombre}}</td>
+          <td>{{proyect.valorProyecto | currency }}</td>
+          <td>{{proyect.startDate | date: 'yyyy-MM-dd'}}</td>
+          <td><a class="btn btn-primary btn-table">Aprobar</a></td>
+          <td><a class="btn btn-success btn-table">Editar</a></td>
+          <td><a class="btn btn-danger btn-table">Eliminar</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h2 class="mb-5"> Usuarios </h2>
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Perfil</th>
+          <th scope="col">Sexo</th>
+          <th scope="col">Activo</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users">
+          <th scope="row">{{ user.nombre }}</th>
+          <td>{{user.perfil}}</td>
+          <td>{{user.sexo}}</td>
+          <td>{{user.activo}}</td>
+          <td><a class="btn btn-success btn-table">Editar</a></td>
+          <td><a class="btn btn-danger btn-table">Eliminar</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

@@ -1,6 +1,6 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
-      <a href="#" class="navbar-brand d-block d-md-none"> <img src="https://ecofin-assets.s3.amazonaws.com/icono-header.png" width="60px" alt="EcoFin-F"> </a>
+      <a [routerLink]="['/home']" class="navbar-brand d-block d-md-none"> <img src="https://ecofin-assets.s3.amazonaws.com/icono-header.png" width="60px" alt="EcoFin-F"> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#eco-nav" aria-controls="eco-nav" aria-expanded="false" aria-label="Menu de Navegacion">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,6 +27,8 @@
         <li *ngIf="bandera" class="nav-item">
           <a href="#" class="nav-link dropdown-toggle" id="menu-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ user.nombre }} </a>
           <div class="dropdown-menu" aria-labelledby="menu-user">
+            <a [routerLink]="['/home-user']" class="dropdown-item">Mis proyectos</a>
+            <a [routerLink]="['/home-user']" class="dropdown-item">Editar cuenta</a>
             <a (click)="logout()" class="dropdown-item">Logout</a>
           </div>
         </li>
@@ -42,7 +44,7 @@
         <a *ngIf="!bandera" href="#"> Nosotros </a>
       </div>
       <div class="col-4 my-0 py-1">
-        <a href="#" class="p-0 m-0"> <img src="https://ecofin-assets.s3.amazonaws.com/icono-header.png" width="60px" alt="EcoFin-F"> </a>
+        <a [routerLink]="['/home']" class="p-0 m-0"> <img src="https://ecofin-assets.s3.amazonaws.com/icono-header.png" width="60px" alt="EcoFin-F"> </a>
       </div>
       <div class="col-4 d-flex justify-content-around align-items-center">
        <div class="dropdown">
@@ -56,6 +58,8 @@
         <div *ngIf="bandera" class="dropdown">
           <a class="nombre dropdown-toggle" id="menu-usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ user.nombre }} </a>
           <div class="dropdown-menu" aria-labelledby="menu-usuario">
+            <a [routerLink]="['/home-user']" class="dropdown-item">Mis proyectos</a>
+            <a [routerLink]="['/home-user']" class="dropdown-item">Editar cuenta</a>
             <a (click)="logout()" class="dropdown-item">Logout</a>
           </div>
         </div>

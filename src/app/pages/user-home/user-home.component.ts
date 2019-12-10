@@ -25,4 +25,10 @@ export class UserHomeComponent implements OnInit {
     });
   }
 
+  details(index) {
+    localStorage.removeItem('ID_PROYECT');
+    localStorage.setItem('ID_PROYECT', index);
+    this.router.navigate(['/proyect-details']);
+  }
+
 }

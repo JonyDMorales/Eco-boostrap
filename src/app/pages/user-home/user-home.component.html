@@ -13,6 +13,13 @@
 
   <div class="mis-proyectos my-4">
 
+    <div class="row proyectos">
+      <div class="col-12 py-3 ml-5 d-flex d-inline">
+        <h3>Tus proyectos</h3> <i class="ml-3 mt-0 far fa-heart"></i>
+      </div>
+    </div>
+
+    <div class="row">
       <div *ngFor="let proyect of proyects;let  i = index" class="col-12 col-md-6 col-lg-4 mt-5 mb-5 d-flex justify-content-around">
         <div (click)="details(proyect.id)" class="card">
           <img [src]="proyect.foto" class="card-img-top" alt="img top card" >
@@ -42,10 +49,11 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="col-12 text-center text-md-right  mt-4 mb-4 pr-md-5">
-        <button [routerLink]="['/all/proyects']"><i class="fas fa-plus"></i></button>
-      </div>
+    <div class="col-12 text-center  mt-4 mb-4 pr-md-5">
+      <button [routerLink]="['/proyect']"><i class="fas fa-plus"></i></button>
+    </div>
 
   </div>
 

@@ -40,9 +40,15 @@ export class LoginComponent implements OnInit {
     if (formLogin.valid) {
       this.consultasService.login(this.user.email, this.user.password).subscribe(
         (res) =>  {
-          if (localStorage.getItem('TOKEN') != null) {
+
+          const admin = localStorage.getItem('ADMIN');
+          if (admin === '1') {
+            this.router.navigate(['/home-admin']);
+          } else {
             this.router.navigate(['/home-user']);
-          } },
+          }
+
+          },
       (error) =>  {}
         );
     }

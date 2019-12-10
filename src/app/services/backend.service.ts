@@ -36,9 +36,9 @@ export class BackendService {
           if ( res['TOKEN'] != null ) {
             localStorage.setItem('TOKEN', res['TOKEN']);
             localStorage.setItem('TOKEN_ID', res['TOKEN_ID']);
-            localStorage.setItem('NOMBRE',res['NOMBRE'] );
-            localStorage.setItem('EMAIL',res['EMAIL'] );
-            console.log(localStorage.getItem('NOMBRE'));
+            localStorage.setItem('NOMBRE', res['NOMBRE'] );
+            localStorage.setItem('EMAIL', res['EMAIL'] );
+            localStorage.setItem('ADMIN', res['ADMIN'] );
           } else {
             localStorage.clear();
             Swal.fire({
@@ -81,12 +81,13 @@ export class BackendService {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
-      })};
-    return this.http.post(uri, {  }, httpOptions ).pipe(
+      })
+    };
+    return this.http.post(uri, {}, httpOptions).pipe(
       map((res: Array<ProyectModel>) => {
-          if ( res ) {
-            return res;
-          }
+        if (res) {
+          return res;
+        }
       }));
   }
 
@@ -164,6 +165,38 @@ export class BackendService {
       })};
     return this.http.post(uri, { id }, httpOptions ).pipe(
       map((res: ProyectModel) => {
+        if ( res ) {
+          return res;
+        }
+      }));
+  }
+
+  /* ADMIN */
+
+  public getAllProyectosAdmin() {
+    const uri = this.url + 'admin/get/all/proyectos';
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('TOKEN')
+      })};
+    return this.http.post(uri, {  }, httpOptions ).pipe(
+      map((res: Array<ProyectModel>) => {
+        if ( res ) {
+          return res;
+        }
+      }));
+  }
+
+  public getAllPersonas() {
+    const uri = this.url + 'admin/get/all/persona';
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('TOKEN')
+      })};
+    return this.http.post(uri, {  }, httpOptions ).pipe(
+      map((res: Array<UserModel>) => {
         if ( res ) {
           return res;
         }

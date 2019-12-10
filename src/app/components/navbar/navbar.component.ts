@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserModel} from '../../models/user.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,7 @@ export class NavbarComponent implements OnInit {
   user: UserModel;
   bandera = false;
 
-  constructor() {
+  constructor(private router: Router) {
     this.user = new UserModel();
   }
 
@@ -26,7 +27,7 @@ export class NavbarComponent implements OnInit {
 
   logout() {
     localStorage.clear();
-    window.location.reload();
+    this.router.navigate(['/home']);
   }
 
 }

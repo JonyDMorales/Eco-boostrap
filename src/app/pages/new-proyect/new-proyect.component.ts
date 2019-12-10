@@ -77,7 +77,7 @@ export class NewProyectComponent implements OnInit {
     if ( formProyect.valid ) {
       this.backendService.saveProyect(this.proyecto).subscribe(res => {
         if ( res ) {
-          this.router.navigate(['/user']);
+          this.router.navigate(['/home-user']);
         } else {
           Swal.fire({
             icon: 'error',
